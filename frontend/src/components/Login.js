@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import './Login.css'
 import axios from "axios";
+import API from "../config/api";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const API = "http://localhost:5000";
 
   const handleSubmit= async(event)=>{
    event.preventDefault();

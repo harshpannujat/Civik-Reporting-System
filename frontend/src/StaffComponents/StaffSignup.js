@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import './StaffSignup.css';
+import API from "../config/api";
 const StaffSignup = () => {
       const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,7 +13,6 @@ const StaffSignup = () => {
   const [departments, setDepartments] = useState([]);
   const [departmentError, setDepartmentError] = useState("");
   const navigate = useNavigate();
-  const API = "http://localhost:5000";
 
   const handleSubmit= async(event)=>{
    event.preventDefault();

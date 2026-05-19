@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import './Signup.css';
 import axios from "axios";
+import API from "../config/api";
 
 const Signup = () => {
       const [name, setName] = useState("");
@@ -9,7 +10,6 @@ const Signup = () => {
   const [address, setaddress] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const API = "http://localhost:5000";
 
   const handleSubmit= async(event)=>{
    event.preventDefault();

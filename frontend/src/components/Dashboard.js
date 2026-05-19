@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import './Dashboard.css';
+import API from "../config/api";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -15,7 +16,6 @@ const Dashboard = () => {
   const [uploading, setUploading] = useState(false);
   const [notice, setNotice] = useState("");
 
-  const API = "http://localhost:5000";
   const token = localStorage.getItem("token");
   const isAuthenticated = Boolean(token && token !== "undefined" && token !== "null");
 

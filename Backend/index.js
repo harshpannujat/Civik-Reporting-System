@@ -6,8 +6,14 @@ const cors=  require("cors");
 dotenv.config();
 const app = express();
 const Routes= require('./routes/user');
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://civik-reporting-system.onrender.com',
+  process.env.FRONTEND_URL
+].filter(Boolean);
+
 app.use(cors({
-  origin: ['http://localhost:3000'],
+  origin: allowedOrigins,
   credentials: true
 }));
 app.use(express.json());
